@@ -151,5 +151,6 @@ This plugin is open source and contributions are welcome! Please visit the GitHu
 == Credits ==
 
 Developed by Md Shukur Miah
+
 Facebook Conversions API documentation: https://developers.facebook.com/docs/marketing-api/conversions-api/
 
