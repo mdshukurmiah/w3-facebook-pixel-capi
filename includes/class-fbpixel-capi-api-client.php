@@ -1,6 +1,6 @@
 <?php
 /**
- * W3 Facebook Pixel CAPI API Client
+ * W3 Pixel CAPI API Client
  * 
  * Handles communication with Facebook Conversions API
  */
@@ -43,7 +43,7 @@ class FBPixel_CAPI_API_Client {
     public function send_events($events) {
         // Validate settings
         if (empty($this->settings['pixel_id']) || empty($this->settings['access_token'])) {
-            return new WP_Error('missing_credentials', __('Pixel ID or Access Token is missing', 'w3-facebook-pixel-capi'));
+            return new WP_Error('missing_credentials', __('Pixel ID or Access Token is missing', 'w3-pixel-capi'));
         }
         
         // Prepare API endpoint
@@ -142,7 +142,7 @@ class FBPixel_CAPI_API_Client {
             return $decoded['error']['error_user_msg'];
         }
         
-        return __('Unknown API error occurred', 'w3-facebook-pixel-capi');
+        return __('Unknown API error occurred', 'w3-pixel-capi');
     }
     
     /**

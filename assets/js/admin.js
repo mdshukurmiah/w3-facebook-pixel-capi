@@ -1,5 +1,5 @@
 /**
- * W3 Facebook Pixel CAPI Admin JavaScript
+ * W3 Pixel CAPI Admin JavaScript
  */
 
 (function($) {

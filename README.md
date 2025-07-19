@@ -1,4 +1,4 @@
-# W3 Facebook Pixel Server-Side Tracking (CAPI)
+# W3 Pixel Server-Side Tracking (CAPI)
 
 **Contributors:** Md Shukur Miah  
 **Tags:** facebook, pixel, conversions api, server-side tracking, woocommerce, marketing, analytics  
@@ -58,7 +58,7 @@ The Facebook Pixel Server-Side Tracking (CAPI) plugin enables you to send Facebo
 
 ## Installation
 
-1. Upload the plugin files to `/wp-content/plugins/w3-facebook-pixel-capi`, or install through WordPress plugins screen.
+1. Upload the plugin files to `/wp-content/plugins/w3-pixel-capi`, or install through WordPress plugins screen.
 2. Activate the plugin via the ‘Plugins’ screen.
 3. Navigate to `Settings > Facebook Pixel CAPI`.
 4. Enter your Facebook Pixel ID and CAPI Access Token.

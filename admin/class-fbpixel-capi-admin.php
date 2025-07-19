@@ -1,6 +1,6 @@
 <?php
 /**
- * W3 Facebook Pixel CAPI Admin
+ * W3 Pixel CAPI Admin
  * 
  * Handles admin interface and settings
  */
@@ -37,7 +37,7 @@ class FBPixel_CAPI_Admin {
         // General settings section
         add_settings_section(
             'fbpixel_capi_general_section',
-            __('General Settings', 'w3-facebook-pixel-capi'),
+            __('General Settings', 'w3-pixel-capi'),
             array($this, 'general_section_callback'),
             'fbpixel-capi-settings'
         );
@@ -45,7 +45,7 @@ class FBPixel_CAPI_Admin {
         // Pixel ID field
         add_settings_field(
             'pixel_id',
-            __('Facebook Pixel ID', 'w3-facebook-pixel-capi'),
+            __('Facebook Pixel ID', 'w3-pixel-capi'),
             array($this, 'pixel_id_callback'),
             'fbpixel-capi-settings',
             'fbpixel_capi_general_section'
@@ -54,7 +54,7 @@ class FBPixel_CAPI_Admin {
         // Access Token field
         add_settings_field(
             'access_token',
-            __('Conversions API Access Token', 'w3-facebook-pixel-capi'),
+            __('Conversions API Access Token', 'w3-pixel-capi'),
             array($this, 'access_token_callback'),
             'fbpixel-capi-settings',
             'fbpixel_capi_general_section'
@@ -63,7 +63,7 @@ class FBPixel_CAPI_Admin {
         // Test Event Code field
         add_settings_field(
             'test_event_code',
-            __('Test Event Code', 'w3-facebook-pixel-capi'),
+            __('Test Event Code', 'w3-pixel-capi'),
             array($this, 'test_event_code_callback'),
             'fbpixel-capi-settings',
             'fbpixel_capi_general_section'
@@ -72,7 +72,7 @@ class FBPixel_CAPI_Admin {
         // Events settings section
         add_settings_section(
             'fbpixel_capi_events_section',
-            __('Event Settings', 'w3-facebook-pixel-capi'),
+            __('Event Settings', 'w3-pixel-capi'),
             array($this, 'events_section_callback'),
             'fbpixel-capi-settings'
         );
@@ -80,7 +80,7 @@ class FBPixel_CAPI_Admin {
         // Enabled Events field
         add_settings_field(
             'enabled_events',
-            __('Enabled Events', 'w3-facebook-pixel-capi'),
+            __('Enabled Events', 'w3-pixel-capi'),
             array($this, 'enabled_events_callback'),
             'fbpixel-capi-settings',
             'fbpixel_capi_events_section'
@@ -89,7 +89,7 @@ class FBPixel_CAPI_Admin {
         // Debug settings section
         add_settings_section(
             'fbpixel_capi_debug_section',
-            __('Debug Settings', 'w3-facebook-pixel-capi'),
+            __('Debug Settings', 'w3-pixel-capi'),
             array($this, 'debug_section_callback'),
             'fbpixel-capi-settings'
         );
@@ -97,7 +97,7 @@ class FBPixel_CAPI_Admin {
         // Debug Mode field
         add_settings_field(
             'debug_mode',
-            __('Debug Mode', 'w3-facebook-pixel-capi'),
+            __('Debug Mode', 'w3-pixel-capi'),
             array($this, 'debug_mode_callback'),
             'fbpixel-capi-settings',
             'fbpixel_capi_debug_section'
@@ -132,43 +132,43 @@ class FBPixel_CAPI_Admin {
                     
                     <hr>
                     
-                    <h2><?php _e('Test Connection', 'w3-facebook-pixel-capi'); ?></h2>
-                    <p><?php _e('Test your Conversions API connection to ensure everything is working correctly.', 'w3-facebook-pixel-capi'); ?></p>
+                    <h2><?php _e('Test Connection', 'w3-pixel-capi'); ?></h2>
+                    <p><?php _e('Test your Conversions API connection to ensure everything is working correctly.', 'w3-pixel-capi'); ?></p>
                     
                     <form method="post">
                         <?php wp_nonce_field('fbpixel_capi_test_connection', 'fbpixel_capi_test_nonce'); ?>
-                        <input type="submit" name="test_connection" class="button button-secondary" value="<?php _e('Test Connection', 'w3-facebook-pixel-capi'); ?>">
+                        <input type="submit" name="test_connection" class="button button-secondary" value="<?php _e('Test Connection', 'w3-pixel-capi'); ?>">
                     </form>
                 </div>
                 
                 <div class="fbpixel-capi-sidebar">
                     <div class="fbpixel-capi-info-box">
-                        <h3><?php _e('Getting Started', 'w3-facebook-pixel-capi'); ?></h3>
+                        <h3><?php _e('Getting Started', 'w3-pixel-capi'); ?></h3>
                         <ol>
-                            <li><?php _e('Create a Facebook Business Manager account', 'w3-facebook-pixel-capi'); ?></li>
-                            <li><?php _e('Set up a Facebook Pixel in Events Manager', 'w3-facebook-pixel-capi'); ?></li>
-                            <li><?php _e('Generate a Conversions API access token', 'w3-facebook-pixel-capi'); ?></li>
-                            <li><?php _e('Enter your Pixel ID and Access Token above', 'w3-facebook-pixel-capi'); ?></li>
-                            <li><?php _e('Configure which events to track', 'w3-facebook-pixel-capi'); ?></li>
-                            <li><?php _e('Test your connection', 'w3-facebook-pixel-capi'); ?></li>
+                            <li><?php _e('Create a Facebook Business Manager account', 'w3-pixel-capi'); ?></li>
+                            <li><?php _e('Set up a Facebook Pixel in Events Manager', 'w3-pixel-capi'); ?></li>
+                            <li><?php _e('Generate a Conversions API access token', 'w3-pixel-capi'); ?></li>
+                            <li><?php _e('Enter your Pixel ID and Access Token above', 'w3-pixel-capi'); ?></li>
+                            <li><?php _e('Configure which events to track', 'w3-pixel-capi'); ?></li>
+                            <li><?php _e('Test your connection', 'w3-pixel-capi'); ?></li>
                         </ol>
                     </div>
                     
                     <div class="fbpixel-capi-info-box">
-                        <h3><?php _e('Documentation', 'w3-facebook-pixel-capi'); ?></h3>
+                        <h3><?php _e('Documentation', 'w3-pixel-capi'); ?></h3>
                         <ul>
-                            <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/" target="_blank"><?php _e('Facebook Conversions API Documentation', 'w3-facebook-pixel-capi'); ?></a></li>
-                            <li><a href="https://www.facebook.com/business/help/AboutConversionsAPI" target="_blank"><?php _e('About Conversions API', 'w3-facebook-pixel-capi'); ?></a></li>
-                            <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/get-started" target="_blank"><?php _e('Getting Started Guide', 'w3-facebook-pixel-capi'); ?></a></li>
+                            <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/" target="_blank"><?php _e('Facebook Conversions API Documentation', 'w3-pixel-capi'); ?></a></li>
+                            <li><a href="https://www.facebook.com/business/help/AboutConversionsAPI" target="_blank"><?php _e('About Conversions API', 'w3-pixel-capi'); ?></a></li>
+                            <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/get-started" target="_blank"><?php _e('Getting Started Guide', 'w3-pixel-capi'); ?></a></li>
                         </ul>
                     </div>
                     
                     <?php if (!empty($settings['debug_mode'])): ?>
                     <div class="fbpixel-capi-info-box">
-                        <h3><?php _e('Debug Information', 'w3-facebook-pixel-capi'); ?></h3>
-                        <p><?php _e('Debug mode is enabled. Check your WordPress debug log for detailed information about API requests and responses.', 'w3-facebook-pixel-capi'); ?></p>
-                        <p><strong><?php _e('WooCommerce Status:', 'w3-facebook-pixel-capi'); ?></strong> 
-                            <?php echo class_exists('WooCommerce') ? __('Active', 'w3-facebook-pixel-capi') : __('Not Active', 'w3-facebook-pixel-capi'); ?>
+                        <h3><?php _e('Debug Information', 'w3-pixel-capi'); ?></h3>
+                        <p><?php _e('Debug mode is enabled. Check your WordPress debug log for detailed information about API requests and responses.', 'w3-pixel-capi'); ?></p>
+                        <p><strong><?php _e('WooCommerce Status:', 'w3-pixel-capi'); ?></strong> 
+                            <?php echo class_exists('WooCommerce') ? __('Active', 'w3-pixel-capi') : __('Not Active', 'w3-pixel-capi'); ?>
                         </p>
                     </div>
                     <?php endif; ?>
@@ -182,21 +182,21 @@ class FBPixel_CAPI_Admin {
      * General section callback
      */
     public function general_section_callback() {
-        echo '<p>' . __('Configure your Facebook Pixel and Conversions API credentials.', 'w3-facebook-pixel-capi') . '</p>';
+        echo '<p>' . __('Configure your Facebook Pixel and Conversions API credentials.', 'w3-pixel-capi') . '</p>';
     }
     
     /**
      * Events section callback
      */
     public function events_section_callback() {
-        echo '<p>' . __('Choose which events to track via server-side tracking.', 'w3-facebook-pixel-capi') . '</p>';
+        echo '<p>' . __('Choose which events to track via server-side tracking.', 'w3-pixel-capi') . '</p>';
     }
     
     /**
      * Debug section callback
      */
     public function debug_section_callback() {
-        echo '<p>' . __('Debug settings for troubleshooting and development.', 'w3-facebook-pixel-capi') . '</p>';
+        echo '<p>' . __('Debug settings for troubleshooting and development.', 'w3-pixel-capi') . '</p>';
     }
     
     /**
@@ -207,7 +207,7 @@ class FBPixel_CAPI_Admin {
         $value = isset($settings['pixel_id']) ? $settings['pixel_id'] : '';
         ?>
         <input type="text" id="pixel_id" name="<?php echo self::OPTION_NAME; ?>[pixel_id]" value="<?php echo esc_attr($value); ?>" class="regular-text" placeholder="123456789012345">
-        <p class="description"><?php _e('Your Facebook Pixel ID (15-16 digits). You can find this in your Facebook Events Manager.', 'w3-facebook-pixel-capi'); ?></p>
+        <p class="description"><?php _e('Your Facebook Pixel ID (15-16 digits). You can find this in your Facebook Events Manager.', 'w3-pixel-capi'); ?></p>
         <?php
     }
     
@@ -219,7 +219,7 @@ class FBPixel_CAPI_Admin {
         $value = isset($settings['access_token']) ? $settings['access_token'] : '';
         ?>
         <input type="password" id="access_token" name="<?php echo self::OPTION_NAME; ?>[access_token]" value="<?php echo esc_attr($value); ?>" class="large-text" placeholder="EAAxxxxxxxxxxxxx">
-        <p class="description"><?php _e('Your Conversions API access token. Generate this in Facebook Events Manager under Conversions API settings.', 'w3-facebook-pixel-capi'); ?></p>
+        <p class="description"><?php _e('Your Conversions API access token. Generate this in Facebook Events Manager under Conversions API settings.', 'w3-pixel-capi'); ?></p>
         <?php
     }
     
@@ -231,7 +231,7 @@ class FBPixel_CAPI_Admin {
         $value = isset($settings['test_event_code']) ? $settings['test_event_code'] : '';
         ?>
         <input type="text" id="test_event_code" name="<?php echo self::OPTION_NAME; ?>[test_event_code]" value="<?php echo esc_attr($value); ?>" class="regular-text" placeholder="TEST12345">
-        <p class="description"><?php _e('Optional test event code for testing your integration. You can find this in Facebook Events Manager.', 'w3-facebook-pixel-capi'); ?></p>
+        <p class="description"><?php _e('Optional test event code for testing your integration. You can find this in Facebook Events Manager.', 'w3-pixel-capi'); ?></p>
         <?php
     }
     
@@ -243,14 +243,14 @@ class FBPixel_CAPI_Admin {
         $enabled_events = isset($settings['enabled_events']) ? $settings['enabled_events'] : array();
         
         $available_events = array(
-            'PageView' => __('Page View', 'w3-facebook-pixel-capi'),
-            'AddToCart' => __('Add to Cart', 'w3-facebook-pixel-capi'),
-            'InitiateCheckout' => __('Initiate Checkout', 'w3-facebook-pixel-capi'),
-            'Purchase' => __('Purchase', 'w3-facebook-pixel-capi'),
-            'ViewContent' => __('View Content', 'w3-facebook-pixel-capi'),
-            'Search' => __('Search', 'w3-facebook-pixel-capi'),
-            'Lead' => __('Lead', 'w3-facebook-pixel-capi'),
-            'CompleteRegistration' => __('Complete Registration', 'w3-facebook-pixel-capi')
+            'PageView' => __('Page View', 'w3-pixel-capi'),
+            'AddToCart' => __('Add to Cart', 'w3-pixel-capi'),
+            'InitiateCheckout' => __('Initiate Checkout', 'w3-pixel-capi'),
+            'Purchase' => __('Purchase', 'w3-pixel-capi'),
+            'ViewContent' => __('View Content', 'w3-pixel-capi'),
+            'Search' => __('Search', 'w3-pixel-capi'),
+            'Lead' => __('Lead', 'w3-pixel-capi'),
+            'CompleteRegistration' => __('Complete Registration', 'w3-pixel-capi')
         );
         
         echo '<fieldset>';
@@ -262,19 +262,19 @@ class FBPixel_CAPI_Admin {
             // Add descriptions and disable unsupported events
             switch ($event_key) {
                 case 'PageView':
-                    $description = __('Track when users view pages on your website', 'w3-facebook-pixel-capi');
+                    $description = __('Track when users view pages on your website', 'w3-pixel-capi');
                     break;
                 case 'AddToCart':
                 case 'InitiateCheckout':
                 case 'Purchase':
                     if (!class_exists('WooCommerce')) {
                         $disabled = 'disabled';
-                        $description = __('Requires WooCommerce', 'w3-facebook-pixel-capi');
+                        $description = __('Requires WooCommerce', 'w3-pixel-capi');
                     } else {
                         $descriptions = array(
-                            'AddToCart' => __('Track when users add products to cart', 'w3-facebook-pixel-capi'),
-                            'InitiateCheckout' => __('Track when users start the checkout process', 'w3-facebook-pixel-capi'),
-                            'Purchase' => __('Track completed purchases', 'w3-facebook-pixel-capi')
+                            'AddToCart' => __('Track when users add products to cart', 'w3-pixel-capi'),
+                            'InitiateCheckout' => __('Track when users start the checkout process', 'w3-pixel-capi'),
+                            'Purchase' => __('Track completed purchases', 'w3-pixel-capi')
                         );
                         $description = $descriptions[$event_key];
                     }
@@ -282,14 +282,14 @@ class FBPixel_CAPI_Admin {
                 case 'ViewContent':
                     if (!class_exists('WooCommerce')) {
                         $disabled = 'disabled';
-                        $description = __('Requires WooCommerce', 'w3-facebook-pixel-capi');
+                        $description = __('Requires WooCommerce', 'w3-pixel-capi');
                     } else {
-                        $description = __('Track when users view product pages', 'w3-facebook-pixel-capi');
+                        $description = __('Track when users view product pages', 'w3-pixel-capi');
                     }
                     break;
                 default:
                     $disabled = 'disabled';
-                    $description = __('Coming in future version', 'w3-facebook-pixel-capi');
+                    $description = __('Coming in future version', 'w3-pixel-capi');
                     break;
             }
             
@@ -318,9 +318,9 @@ class FBPixel_CAPI_Admin {
         ?>
         <label>
             <input type="checkbox" name="<?php echo self::OPTION_NAME; ?>[debug_mode]" value="1" <?php checked($value); ?>>
-            <?php _e('Enable debug mode', 'w3-facebook-pixel-capi'); ?>
+            <?php _e('Enable debug mode', 'w3-pixel-capi'); ?>
         </label>
-        <p class="description"><?php _e('When enabled, detailed logs will be written to the WordPress debug log and database for troubleshooting.', 'w3-facebook-pixel-capi'); ?></p>
+        <p class="description"><?php _e('When enabled, detailed logs will be written to the WordPress debug log and database for troubleshooting.', 'w3-pixel-capi'); ?></p>
         <?php
     }
     
@@ -342,7 +342,7 @@ class FBPixel_CAPI_Admin {
                 add_settings_error(
                     self::OPTION_NAME,
                     'invalid_pixel_id',
-                    __('Invalid Pixel ID format. Please enter a valid 15-16 digit Pixel ID.', 'w3-facebook-pixel-capi')
+                    __('Invalid Pixel ID format. Please enter a valid 15-16 digit Pixel ID.', 'w3-pixel-capi')
                 );
             }
         }
@@ -356,7 +356,7 @@ class FBPixel_CAPI_Admin {
                 add_settings_error(
                     self::OPTION_NAME,
                     'invalid_access_token',
-                    __('Invalid Access Token format. Please enter a valid Conversions API access token.', 'w3-facebook-pixel-capi')
+                    __('Invalid Access Token format. Please enter a valid Conversions API access token.', 'w3-pixel-capi')
                 );
             }
         }
@@ -393,7 +393,7 @@ class FBPixel_CAPI_Admin {
             add_settings_error(
                 self::OPTION_NAME,
                 'invalid_nonce',
-                __('Security check failed. Please try again.', 'w3-facebook-pixel-capi'),
+                __('Security check failed. Please try again.', 'w3-pixel-capi'),
                 'error'
             );
             return;
@@ -407,14 +407,14 @@ class FBPixel_CAPI_Admin {
             add_settings_error(
                 self::OPTION_NAME,
                 'connection_failed',
-                sprintf(__('Connection test failed: %s', 'w3-facebook-pixel-capi'), $result->get_error_message()),
+                sprintf(__('Connection test failed: %s', 'w3-pixel-capi'), $result->get_error_message()),
                 'error'
             );
         } else {
             add_settings_error(
                 self::OPTION_NAME,
                 'connection_success',
-                __('Connection test successful! Your Conversions API is working correctly.', 'w3-facebook-pixel-capi'),
+                __('Connection test successful! Your Conversions API is working correctly.', 'w3-pixel-capi'),
                 'success'
             );
         }

@@ -1,6 +1,6 @@
 <?php
 /**
- * W3 Facebook Pixel CAPI Event Tracker
+ * W3 Pixel CAPI Event Tracker
  * 
  * Handles event tracking and data collection
  */

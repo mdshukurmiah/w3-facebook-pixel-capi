@@ -1,6 +1,6 @@
 <?php
 /**
- * W3 Facebook Pixel CAPI Helpers
+ * W3 Pixel CAPI Helpers
  * 
  * Utility functions and helpers
  */

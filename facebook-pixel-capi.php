@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: W3 Facebook Pixel Server-Side Tracking (CAPI)
- * Plugin URI: https://github.com/mdshukurmiah/w3-facebook-pixel-capi
+ * Plugin Name: W3 Pixel Server-Side Tracking
+ * Plugin URI: https://github.com/mdshukurmiah/w3-pixel-capi
  * Description: A WordPress plugin that enables Facebook Pixel server-side tracking using the Conversions API (CAPI) for improved tracking accuracy and reliability.
  * Version: 1.0.0
  * Author: Md Shukur Miah
  * Author URI: https://www.shukurs.com/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: w3-facebook-pixel-capi
+ * Text Domain: w3-pixel-capi
  * Domain Path: /languages
  * Requires at least: 5.0
  * Tested up to: 6.4
@@ -150,7 +150,7 @@ class FacebookPixelCAPI {
      * Load plugin text domain
      */
     public function load_textdomain() {
-        load_plugin_textdomain('w3-facebook-pixel-capi', false, dirname(FBPIXEL_CAPI_PLUGIN_BASENAME) . '/languages');
+        load_plugin_textdomain('w3-pixel-capi', false, dirname(FBPIXEL_CAPI_PLUGIN_BASENAME) . '/languages');
     }
     
     /**
@@ -218,8 +218,8 @@ class FacebookPixelCAPI {
      */
     public function add_admin_menu() {
         add_options_page(
-            __('Facebook Pixel CAPI Settings', 'w3-facebook-pixel-capi'),
-            __('Facebook Pixel CAPI', 'w3-facebook-pixel-capi'),
+            __('Facebook Pixel CAPI Settings', 'w3-pixel-capi'),
+            __('Facebook Pixel CAPI', 'w3-pixel-capi'),
             'manage_options',
             'fbpixel-capi-settings',
             array($this, 'admin_page_callback')
