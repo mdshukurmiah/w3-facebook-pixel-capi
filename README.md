@@ -1,9 +1,9 @@
-# W3 Pixel Server-Side Tracking (CAPI)
+# W3 Pixel Server-Side Tracking
 
 **Contributors:** Md Shukur Miah  
-**Tags:** facebook, pixel, conversions api, server-side tracking, woocommerce, marketing, analytics  
+**Tags:** facebook, pixel, conversions api, server-side tracking, woocommerce
 **Requires at least:** 5.0  
-**Tested up to:** 6.4  
+**Tested up to:** 6.8  
 **Requires PHP:** 7.4  
 **Stable tag:** 1.0.0  
 **License:** GPLv2 or later  

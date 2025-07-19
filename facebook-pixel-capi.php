@@ -36,6 +36,21 @@ class FacebookPixelCAPI {
      * Plugin instance
      */
     private static $instance = null;
+
+    /**
+     * @var FBPixel_CAPI_API_Client
+     */
+    private $api_client;
+
+    /**
+     * @var FBPixel_CAPI_Event_Tracker
+     */
+    private $event_tracker;
+
+    /**
+     * @var FBPixel_CAPI_Admin
+     */
+    private $admin;
     
     /**
      * Get plugin instance
