@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: W3 Facebook Pixel Server-Side Tracking (CAPI)
- * Plugin URI: https://github.com/mdshukurmiah
+ * Plugin URI: https://github.com/mdshukurmiah/w3-facebook-pixel-capi
  * Description: A WordPress plugin that enables Facebook Pixel server-side tracking using the Conversions API (CAPI) for improved tracking accuracy and reliability.
  * Version: 1.0.0
  * Author: Md Shukur Miah
